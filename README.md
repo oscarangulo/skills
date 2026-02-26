@@ -32,6 +32,25 @@ Generate production-quality dynamic Open Graph images for Next.js App Router pro
 - Title / description character limits for all platforms
 - Full Satori CSS gotchas reference with working workarounds
 
+### [`fusionauth`](./fusionauth)
+
+Full authentication and user management integration with FusionAuth using the TypeScript SDK.
+
+**Triggers:** implement login · add MFA · passwordless auth · passkeys / WebAuthn · register users · refresh JWTs · configure OAuth2/OIDC · set up social login · handle webhooks · multi-tenant deployment · FusionAuth API errors
+
+**Covers:**
+- Standard login with all conditional response codes (200/202/203/212/213/242)
+- MFA flows — TOTP, email, SMS; enable/disable; recovery codes
+- Passwordless login (start → send → complete)
+- WebAuthn/Passkeys registration and authentication ceremonies
+- User and registration CRUD with role assignment
+- JWT lifecycle — refresh, validate, revoke, public key caching
+- Webhooks — create subscriptions, verify signatures, typed event handlers
+- OAuth2/OIDC PKCE flow and logout
+- Multi-tenant patterns with `X-FusionAuth-TenantId`
+- Social / identity provider login (Google, Apple, SAML, OIDC, and 11 more)
+- Common gotchas reference with ❌/✅ examples
+
 ---
 
 ## Installation
@@ -43,7 +62,8 @@ Skills are loaded by referencing the `SKILL.md` file in your Claude Code project
 ```json
 {
   "skills": [
-    "/path/to/strixsoft-skills/nextjs-og-image/SKILL.md"
+    "/path/to/strixsoft-skills/nextjs-og-image/SKILL.md",
+    "/path/to/strixsoft-skills/fusionauth/SKILL.md"
   ]
 }
 ```
@@ -53,7 +73,8 @@ Skills are loaded by referencing the `SKILL.md` file in your Claude Code project
 ```json
 {
   "skills": [
-    "/path/to/strixsoft-skills/nextjs-og-image/SKILL.md"
+    "/path/to/strixsoft-skills/nextjs-og-image/SKILL.md",
+    "/path/to/strixsoft-skills/fusionauth/SKILL.md"
   ]
 }
 ```
